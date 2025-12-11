@@ -23,6 +23,8 @@ app.use(express.json()); // body parser
 app.use(cors({origin: process.env.FRONTEND_URL}));
 //require('./config/passport');
 
+
+
 // ========= Routes ======================
 app.use('/api/users', require('./routes/userRoutes'));
 app.use('/api/projects', require('./routes/projectRoutes'));
@@ -35,3 +37,6 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server running on port: ${PORT}`)
 });
+
+
+
